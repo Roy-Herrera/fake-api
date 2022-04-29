@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import IndexProductos from '../hooks/index'
-import { Container, Table, Button, Modal, FormControl, Alert } from 'react-bootstrap';
+import { Container, Table, Button, Modal, FormControl } from 'react-bootstrap';
 import '../style/Product.css'
 import axios from 'axios';
 
@@ -105,7 +105,6 @@ const ProductosLista = () => {
             <Table striped bordered hover variant="primary">
                 <thead>
                     <tr>
-                        <th>id</th>
                         <th>Producto</th>
                         <th>Title</th>
                         <th>Price</th>
@@ -117,7 +116,6 @@ const ProductosLista = () => {
                 <tbody>
                     {productosIndividual.map((productoInd, key) => (
                         <tr key={key}>
-                            <td>{productoInd.id}</td>
                             <td><img src={productoInd.images[0]} alt="" /></td>
                             <td>{productoInd.title}</td>
                             <td>$ {productoInd.price}</td>
