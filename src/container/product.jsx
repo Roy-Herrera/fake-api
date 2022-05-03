@@ -108,13 +108,15 @@ const ProductosLista = () => {
                     <Modal.Title>Crear un Nuevo Producto</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="inputProducto">
+                    <Form className="inputProducto">
                         <p><br />Ingrese el titulo del producto</p>
                         <FormControl
                             name="title"
                             aria-describedby="inputGroup-sizing-sm"
                             onChange={descripciondeProducto}
                             placeholder="Titulo del Producto"
+                            type="text"
+                            required
                         />
                         <p><br />Ingrese el precio del producto</p>
                         <FormControl
@@ -124,6 +126,7 @@ const ProductosLista = () => {
                             aria-describedby="inputGroup-sizing-sm"
                             onChange={descripciondeProducto}
                             placeholder="Precio del Producto"
+                            required
                         />
                         <p><br />Ingrese la descripcion del producto</p>
                         <Form.Control
@@ -132,6 +135,8 @@ const ProductosLista = () => {
                             name="description"
                             onChange={descripciondeProducto}
                             placeholder="Descripcion del producto"
+                            type="text"
+                            required
                         />
                         <p><br />Ingrese la Imagen del producto</p>
                         <FormControl
@@ -139,9 +144,10 @@ const ProductosLista = () => {
                             aria-describedby="inputGroup-sizing-sm"
                             onChange={descripciondeProducto}
                             placeholder="Ingrese la URL"
+                            required
                         />
 
-                    </div>
+                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button
